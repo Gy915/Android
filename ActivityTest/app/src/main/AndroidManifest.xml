@@ -9,6 +9,7 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
+<<<<<<< HEAD
         <activity android:name=".test">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
@@ -22,6 +23,15 @@
             android:name=".FirstActivity"
             android:label="This is FirstActivity">
 
+=======
+        <activity android:name=".FirstActivity"
+            android:label="This is FirstActivity">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+            <!--添加主活动-->
+>>>>>>> 38f0918ff0717e3837eb822692f1fb53c097e2b8
         </activity>
     </application>
 
