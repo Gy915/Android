@@ -2,7 +2,10 @@ package com.example.activitytest;
 
 import androidx.appcompat.app.AppCompatActivity;
 
+<<<<<<< HEAD
 import android.content.Intent;
+=======
+>>>>>>> 38f0918ff0717e3837eb822692f1fb53c097e2b8
 import android.os.Bundle;
 import android.view.Menu;
 import android.view.MenuItem;
@@ -19,11 +22,18 @@ public class FirstActivity extends AppCompatActivity {
         button1.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
+<<<<<<< HEAD
                 Intent intent=new Intent(FirstActivity.this, SecondActivity.class);
                 startActivity(intent);
             }
         });
 
+=======
+                Toast t=Toast.makeText(FirstActivity.this, "You clicked Button 1", Toast.LENGTH_SHORT);
+                t.show();
+            }
+        });
+>>>>>>> 38f0918ff0717e3837eb822692f1fb53c097e2b8
     }
 
     @Override
