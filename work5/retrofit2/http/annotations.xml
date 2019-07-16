@@ -1,0 +1,5 @@
+<root>
+    <item name='retrofit2.http.Multipart'>
+        <annotation name='java.lang.Deprecated' />
+    </item>
+</root>
