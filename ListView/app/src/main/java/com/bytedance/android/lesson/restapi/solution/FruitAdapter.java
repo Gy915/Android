@@ -4,6 +4,7 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.TextView;
+import android.widget.Toast;
 
 import androidx.annotation.NonNull;
 import androidx.recyclerview.widget.RecyclerView;
@@ -13,12 +14,15 @@ import java.util.List;
 public class FruitAdapter extends RecyclerView.Adapter<FruitAdapter.ViewHolder>
 {
 
+
     public List<Fruit> mFruitList;
     //把布局文件中所有内容加到viewholder中
     static class ViewHolder extends RecyclerView.ViewHolder{
         TextView fruitName;
+        View fruitView;
         public ViewHolder(View view){
             super(view);
+            fruitView=view;
             fruitName=(TextView)view.findViewById(R.id.fruit_name);
         }
     }
@@ -31,7 +35,16 @@ public class FruitAdapter extends RecyclerView.Adapter<FruitAdapter.ViewHolder>
     //加载一个布局，将布局中所有view传到viewholder
 public ViewHolder onCreateViewHolder(@NonNull ViewGroup parent, int viewType) {
         View view= LayoutInflater.from(parent.getContext()).inflate(R.layout.fruit_item,parent,false);
-        ViewHolder holder=new ViewHolder(view);//这里的view是最外层布局
+        final ViewHolder holder=new ViewHolder(view);//这里的view是最外层布局
+        holder.fruitView.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                int position=holder.getAdapterPosition();
+                Fruit fruit=mFruitList.get(position);
+                Toast.makeText(v.getContext(),"you clicked view"+fruit.getName(),Toast.LENGTH_SHORT).show();
+
+            }
+        });
         return holder;
 }
 
