@@ -23,12 +23,13 @@ public class MainActivity extends AppCompatActivity {
         FruitAdapter adapter=new FruitAdapter(fruitList);
         recyclerView.setAdapter(adapter);
 
+
     }
     private void initFruits()
     {
         for(int i=0;i<20;i++)
         {
-            Fruit item=new Fruit(i+" ");
+            Fruit item=new Fruit("chat");
             fruitList.add(item);
         }
     }

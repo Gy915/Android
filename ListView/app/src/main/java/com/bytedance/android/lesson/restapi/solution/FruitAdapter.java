@@ -1,5 +1,6 @@
 package com.bytedance.android.lesson.restapi.solution;
 
+import android.content.Intent;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -36,15 +37,6 @@ public class FruitAdapter extends RecyclerView.Adapter<FruitAdapter.ViewHolder>
 public ViewHolder onCreateViewHolder(@NonNull ViewGroup parent, int viewType) {
         View view= LayoutInflater.from(parent.getContext()).inflate(R.layout.fruit_item,parent,false);
         final ViewHolder holder=new ViewHolder(view);//这里的view是最外层布局
-        holder.fruitView.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                int position=holder.getAdapterPosition();
-                Fruit fruit=mFruitList.get(position);
-                Toast.makeText(v.getContext(),"you clicked view"+fruit.getName(),Toast.LENGTH_SHORT).show();
-
-            }
-        });
         return holder;
 }
 
